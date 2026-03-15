@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>M1x3da5 Graphics</title>
+
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="main.css">
+
+<style>
+
+.home-screen{
+height:100vh;
+width:100%;
+background:#0078ff;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.site-title{
+color:white;
+font-size:48px;
+font-weight:bold;
+margin-bottom:40px;
+}
+
+.discord-login{
+background:#5865F2;
+color:white;
+border:none;
+padding:15px 35px;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+transition:.2s;
+}
+
+.discord-login:hover{
+background:#4752C4;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HOME SCREEN -->
+<div id="home" class="home-screen">
+
+<div class="site-title">
+M1x3da5 Graphics
+</div>
+
+<button class="discord-login" onclick="openLogin()">
+Login with Discord
+</button>
+
+</div>
+
+
+
+<!-- LOGIN PANEL -->
+<div id="loginPanel" class="login-page hidden">
+
+<div class="main">
+
+<div class="authBox">
+
+<div class="main-form">
+
+<div class="main-form-header">
+<h1>Welcome back!</h1>
+<p>Login with your Discord account</p>
+</div>
+
+<form>
+
+<div class="input-groups">
+
+<div class="email-wrapper">
+<label>Email</label>
+<input type="email" placeholder="Enter email">
+</div>
+
+<div class="password-wrapper">
+<label>Password</label>
+<input type="password" placeholder="Enter password">
+</div>
+
+</div>
+
+<div class="login">
+<button type="submit">Login</button>
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function openLogin(){
+
+document.getElementById("home").style.display="none"
+document.getElementById("loginPanel").classList.remove("hidden")
+
+}
+
+</script>
+
+</body>
+</html>
